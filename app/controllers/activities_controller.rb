@@ -1,10 +1,11 @@
 class ActivitiesController < ApplicationController
-  # GET /activities
-  # GET /activities.json
+  # GET users/1/entries/1/activities
+  # GET users/1/entries/1/activities.json
   def index
-    @activities = Activity.all
+    @entry = Entry.find(params["entry_id"])
+    @activity = @entry.activity
 
-    render json: @activities
+    render json: @activity
   end
 
   # GET /activities/1

@@ -3,7 +3,7 @@ class CreateInsulinTypes < ActiveRecord::Migration
     create_table :insulin_types do |t|
       t.string :name
       t.string :acting
-      t.string :type
+      t.string :ins_type
       t.belongs_to :user
     end
   end

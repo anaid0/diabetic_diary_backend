@@ -2,9 +2,10 @@ class MeasurementsController < ApplicationController
   # GET /measurements
   # GET /measurements.json
   def index
-    @measurements = Measurement.all
+    @entry = Entry.find(params["entry_id"])
+    @measurement = @entry.measurement
 
-    render json: @measurements
+    render json: @measurement
   end
 
   # GET /measurements/1

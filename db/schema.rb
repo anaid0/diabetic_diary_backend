@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20140220125010) do
   create_table "insulin_types", force: true do |t|
     t.string  "name"
     t.string  "acting"
-    t.string  "type"
+    t.string  "ins_type"
     t.integer "user_id"
   end
 

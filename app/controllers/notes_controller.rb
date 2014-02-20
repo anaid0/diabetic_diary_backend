@@ -1,10 +1,11 @@
 class NotesController < ApplicationController
-  # GET /notes
-  # GET /notes.json
+  # GET users/1/entries/1/notes
+  # GET users/1/entries/1/notes.json
   def index
-    @notes = Note.all
+    @entry = Entry.find(params["entry_id"])
+    @note = @entry.note
 
-    render json: @notes
+    render json: @note
   end
 
   # GET /notes/1

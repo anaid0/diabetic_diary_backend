@@ -1,10 +1,11 @@
 class MealsController < ApplicationController
-  # GET /meals
-  # GET /meals.json
+  # GET users/1/entries/1/meals
+  # GET users/1/entries/1/meals.json
   def index
-    @meals = Meal.all
+    @entry = Entry.find(params["entry_id"])
+    @meal = @entry.meal
 
-    render json: @meals
+    render json: @meal
   end
 
   # GET /meals/1

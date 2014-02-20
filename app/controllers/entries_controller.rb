@@ -1,17 +1,15 @@
 class EntriesController < ApplicationController
-  # GET /entries
-  # GET /entries.json
+  # GET users/1/entries
+  # GET users/1/entries.json
   def index
     @entries = Entry.all
-
     render json: @entries
   end
 
-  # GET /entries/1
-  # GET /entries/1.json
+  # GET users/1/entries/1
+  # GET users/1/entries/1.json
   def show
     @entry = Entry.find(params[:id])
-
     render json: @entry
   end
 

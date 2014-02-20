@@ -1,10 +1,11 @@
 class DosesController < ApplicationController
-  # GET /doses
-  # GET /doses.json
+  # GET users/1/entries/1/doses
+  # GET users/1/entries/1/doses.json
   def index
-    @doses = Dose.all
+    @entry = Entry.find(params["entry_id"])
+    @dose = @entry.dose
 
-    render json: @doses
+    render json: @dose
   end
 
   # GET /doses/1
