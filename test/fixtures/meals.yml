@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  carbs: 1
+  kcal: 1
+
+two:
+  carbs: 1
+  kcal: 1

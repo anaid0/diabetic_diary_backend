@@ -1,4 +1,14 @@
 DiabeticDiaryBackend::Application.routes.draw do
+  resources :users, except: [:new, :edit]
+  resources :entries, except: [:new, :edit]
+  resources :meals, except: [:new, :edit]
+  resources :notes, except: [:new, :edit]
+  resources :doses, except: [:new, :edit]
+  resources :measurements, except: [:new, :edit]
+  resources :activities, except: [:new, :edit]
+  resources :activity_types, except: [:new, :edit]
+  resources :measurement_types, except: [:new, :edit]
+  resources :insulin_types, except: [:new, :edit]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
